@@ -24,6 +24,14 @@ export default ((opts?: Options) => {
             </li>
           ))}
         </ul>
+        <p></p>
+        <ul>
+          <li>
+            <a href="#">
+              {i18n(cfg.locale).components.footer.scrollToTop}{"⬆️"}
+            </a>
+          </li>
+        </ul>
       </footer>
     )
   }
