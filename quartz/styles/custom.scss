@@ -7,3 +7,12 @@
       display: none;
     }
   }
+
+  article {
+    max-width: 42rem;  // 默认约32rem
+  }
+  // 更适合中文阅读
+article p {
+  line-height: 1.8;
+  margin-bottom: 1.2em;
+}
