@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -16,16 +17,19 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0 # Fetch all history for git info
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
-          node-version: 22
+          node-version-file: .node-version
+          cache: npm
       - name: Install Dependencies
         run: npm ci
+      - name: Install Quartz Plugins
+        run: npx quartz plugin install --from-config
       - name: Build Quartz
         run: npx quartz build
       - name: Upload artifact

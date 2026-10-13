@@ -37,7 +37,6 @@ export default {
     },
     footer: {
       createdWith: "Created with",
-      scrollToTop: "回到顶部",
     },
     graph: {
       title: "关系图谱",

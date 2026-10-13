@@ -37,7 +37,6 @@ export default {
     },
     footer: {
       createdWith: "Created with",
-      scrollToTop: "Scroll to top",
     },
     graph: {
       title: "Graph View",

@@ -1,17 +1,11 @@
-@use "./base.scss";
+@use "./variables.scss" as *;
 
-// put your custom CSS here!
-// 当页面路径为首页（slug 为 index）时，隐藏关系图谱组件
-[data-slug="index"] {
-    .graph {
-      display: none;
-    }
-  }
+// 首页关系图谱由 quartz.config.yaml 中的 not-index 条件控制。
+article {
+  max-width: 42rem;
+}
 
-  article {
-    max-width: 42rem;  // 默认约32rem
-  }
-  // 更适合中文阅读
+// 更适合中文阅读。
 article p {
   line-height: 1.8;
   margin-bottom: 1.2em;

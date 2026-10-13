@@ -40,7 +40,6 @@ export interface Translation {
     }
     footer: {
       createdWith: string
-      scrollToTop: string
     }
     graph: {
       title: string

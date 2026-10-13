@@ -1,0 +1,19 @@
+{
+  "name": "@qyouz/legacy-folder-urls",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
+  },
+  "peerDependencies": {
+    "@quartz-community/utils": "^1.0.0"
+  },
+  "quartz": {
+    "name": "legacy-folder-urls",
+    "displayName": "Legacy folder URLs",
+    "category": "emitter",
+    "quartzVersion": ">=5.0.0"
+  }
+}
